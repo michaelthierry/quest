@@ -38,12 +38,12 @@ function fimPesquisa(){
     perguntas.innerHTML = '';
     const div = document.createElement("div");
     div.innerHTML = `
-        <h2>
-            Obrigado! Vai pela sombra, viu?. Olha os carros 
-        </h2>
+    <h3 id="quest">
+        Obrigado por responder, até mais! 
+    </h3>
     `;
-    
-    opcoes.appendChild(div);
+
+    perguntas.appendChild(div);
     deletButtonsNavegate();
     setTimeout(() => {
         location.reload(); // Recarrega a página após 2 segundos
