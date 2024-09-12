@@ -1,0 +1,393 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Digital+7&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e600e6;
+    background-image:url('img/img00.jpg');
+
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed;
+    transition: background-image 2s ease-in-out;
+}
+/*
+#Titulo_inicial{
+    border-style: none;
+    position: absolute;
+    top:0;
+    text-align: center;
+    padding: 0;
+    height: 10%;
+    width: 80%;
+    /*font-family: 'orbitron';
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.3em;
+    color: #00ff99;    
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+*/
+#Titulo_inicial{
+    /*conf fontes*/
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: white;
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    background: linear-gradient(145deg, #0f0f0f, #2a2a2a);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    display: inline-block;
+    position: absolute;
+    top:0;
+    text-align: center;
+}
+h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 153, 0.5), transparent);
+    border-radius: 50%;
+    transform: scale(1.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+h2:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.pergunta{
+    color: white;
+    font-family: 'Righteous', sans-serif;
+    font-size: 2.0em;
+}
+
+/*button{
+    width: 80%;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}*/
+button {
+    width: 80%;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(145deg, #0f0f0f, #2a2a2a);
+    border: 2px solid #4FD1C5;
+    border-radius: 8px;
+    color: #4FD1C5;
+    font-size: 1.0em;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 255, 153, 0.3), 0 0 10px rgba(0, 255, 153, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 153, 0.4), transparent);
+    border-radius: 10%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: 0;
+}
+
+button:hover::before {
+    opacity: 1;
+    
+}
+
+button:hover {
+    background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
+    box-shadow: 0 8px 16px rgba(0, 255, 153, 0.5), 0 0 20px rgba(0, 255, 153, 0.7);
+    color: #ffffff;
+    
+}
+
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+/*estilo botões de navegação*/
+.botaoNavegador{
+    height: 15%;
+    width: 15%;
+}
+#back{
+
+    width: 9%;
+    height: 12%;
+
+    border-style: solid;
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    display: flex;
+    align-items:center;
+    
+    transform: translateY(-50%); 
+    background-color: #e600e6;
+    
+    
+}
+
+#back-div1{ 
+    height: 75%;
+    width: 100%;
+
+    transform: translatex(20%);
+
+    clip-path: polygon(50% 0%, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background-color: aqua;
+}
+#back-div2{
+    height: 75%;
+    width: 100%;
+    transform: translateX(-50%);
+    clip-path: polygon(50% 0%, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background-color: aqua;
+
+}
+
+#prox{
+    width: 9%;
+    height: 12%;
+
+    border-style: solid;
+    position: absolute;
+    right:0;
+    top: 50%;
+
+    display: flex;
+    align-items:center;
+
+    background-color: #e600e6;
+    transform: translateY(-50%);
+    
+    
+
+}
+
+#prox-div1{
+    height: 75%;
+    width: 100%;
+
+    transform: translateX(50%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0%);
+    background-color: aqua;
+}
+#prox-div2{
+    height: 75%;
+    width: 100%;
+    transform: translateX(-20%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0%);
+    background-color: aqua;
+
+}
+
+/*estilo quest*/
+#form-id{
+    height: 60%;
+    width: 80%;
+    border-style: none;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+
+    
+}
+#areaPergunta{
+    border-style: None;
+    border-radius: 15px;
+    text-align: center;
+    
+    height: 30%;
+    width: 90%;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+#areaOpcao{
+    /*estilo de borda*/
+    border-style: none;
+    text-align: center;
+
+    /*estilo position*/
+    height: 50%;
+    width: 90%;
+
+    /*estilo posição*/
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -10%);
+
+}
+.fire{
+    height: 25%;
+    width: 5%;
+
+    transform: translate(100%, 95%);
+
+    background-color: aqua;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    display: flex;
+
+}
+.cigarrete{
+    height: 25%;
+    width: 85%;
+
+    right: 0;
+    top: 50;
+
+    transform: translate(5%, 95%);
+    background-color: aqua;
+
+    clip-path: polygon(1.5% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+
+/*CONFIGURAÇÕES DO BOTAO INICIAR*/
+.wrap {
+    height:50%;
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#iniciar {
+    max-width: 30%;
+    max-height: 30%;
+    min-width: 30%;
+    min-height: 30%;
+    display: inline-flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+#iniciar::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(50% + 12px);
+    min-height: calc(50% + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+#iniciar:hover, 
+#iniciar:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+#iniciar:hover::before, 
+#iniciar:focus::before {
+    opacity: 1;
+}
+
+#iniciar::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.button:hover::after, 
+.button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
