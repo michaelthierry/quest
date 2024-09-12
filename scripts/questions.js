@@ -9,24 +9,24 @@ const questions = [
         ]
     },
     {
-        questao: "Com qual idade você começou a usuar?",
+        questao: "Com qual idade você começou a usuar cigarro eletrônico?",
         respostas:[
             {opcao:"Menos de 12 anos"},
             {opcao:"12 - 14 anos"},
             {opcao:"15 - 17 anos"},
             {opcao:"18 - anos ou mais"},
-            {opcao:"Sai fora irmão, eu fiz proerd!"}
+            {opcao:"Não uso!"}
         ]
     },
     {
-        questao: "Qual foi o principal motivos que te levaram a usar cigarro eletrônico.",
+        questao: "Qual foi o principal motivos que te levou a usar cigarro eletrônico?",
         respostas:[
             {opcao:"curiosidade."},
             {opcao:"pressão dos amigos."},
             {opcao:"para relaxar."},
             {opcao:"para se sentir incluido."},
             {opcao:"é menos pejudicial."},
-            {opcao: "outro"}
+            {opcao:"outro"}
         ]
     },
     {
@@ -36,19 +36,19 @@ const questions = [
             {opcao:"Metais pesados"},
             {opcao:"Metais pesados"},
             {opcao:"Aromas artificiais"},
-            {opcao:"Sei lá, não sou eu que faço!"}
+            {opcao:"Não sei!"}
             
         ]
     },
     {
-        questao: "Quais dos seguintes riscos à saúde você acha que estão associados ao uso de cigarros eletrônicos? Escolhas todos que você concorda!",
+        questao: "Quais dos seguintes riscos à saúde você acha que estão associados ao uso de cigarros eletrônicos?",
         respostas:[
             {opcao:"Problemas respiratórios"},
             {opcao:"Dependencia de nicotina"},
             {opcao:"Problemas cardiovasculares"},
             {opcao:"Danos à saúde bucal"},
             {opcao:"Câncer"},
-            {opcao:"Não sei, nao sou médico!"}
+            {opcao:"Não sei!"}
         ]
     },
     {
@@ -56,27 +56,27 @@ const questions = [
         respostas:[
             {opcao:"Pode causar problemas de saúde que afetam os estudos"},
             {opcao:"Pode levar a problemas de disciplina na escola"},
-            {opcao:"Pode afastar amigos que não concordam co o uso"},
+            {opcao:"Pode afastar amigos que não concordam com o uso"},
             {opcao:"Não acho que afeta"},
-            {opcao:"Não sei"}
+            {opcao:"Não sei!"}
             
         ]
     },
     {
-        questao: "Em que local da escola você geralmente usa o cigarrp eletrônico?",
+        questao: "Em que local da escola você geralmente usa o cigarro eletrônico?",
         respostas:[
             {opcao:"Banheiros"},
             {opcao:"corredores"},
             {opcao:"Patio"},
             {opcao:"Sala de aula"},
-            {opcao:"outro"}
+            {opcao:"Outro"}
         ]
     },
     {
-        questao: "Os pais concordam com o seu uso de cigarro eletrônico?",
+        questao: "Os seus pais concordam com o seu uso de cigarro eletrônico?",
         respostas:[
-            {opcao:"Sim, foi meu pai que me deu"},
-            {opcao:"Não, meu pai foi comprar e não voltou."}
+            {opcao:"Sim"},
+            {opcao:"Não"}
         ]
     },
     {
@@ -87,16 +87,14 @@ const questions = [
         ]
     },
     {
-        questao: "Após responder esse questionario punk, você considera reduzir o uso de cigarro eletrônico?",
+        questao: "Após responder esse questionário, você considera reduzir o uso de cigarro eletrônico?",
         respostas:[
             {opcao:"Sim"},
-            {opcao:"Talvez, vou fumar um enquanto penso"},
-            {opcao:"Não, eu tô bem... cof!.. cof!... cof!.."},
-            {opcao:"Eu não uso, fiz Proerd"}
-            
+            {opcao:"Talvez"},
+            {opcao:"Não"},
+            {opcao:"Eu não uso!"}
         ]
     }
-
 ]
 
 export default questions;

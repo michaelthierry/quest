@@ -6,8 +6,7 @@ const animacao = document.querySelector(".animation");
 const fundo = document.querySelector("#body");
 const form = document.querySelector("#form-id");
 const areOpcao = document.getElementById('areaOpcao');
-
-
+const frameBt2 = document.getElementById('frame-button2')
 const images = [
     'img/img01.jpg',
     'img/img02.jpg',
@@ -80,10 +79,12 @@ function anteriorQuestao(e){
 function enviarResposta(e){
     // adiciona a opção vetor
     botao_clicado.push(e);
+    perguntas.innerHTML='';
     opcoes.innerHTML = '';
+    
     const div = document.createElement("div");
     div.innerHTML = `
-        <button type="submit" class="resposta">
+        <button type="submit" id="iniciar">
            Enviar
         </button>
     `;
@@ -112,7 +113,7 @@ function carregaQuestao(){
     // pega a pergunta da lista de perguntas no indice indicado
     const item = questions[indiceQuestao];
     //pega a pergunta do item
-    perguntas.innerHTML = item.questao;
+    perguntas.innerHTML = `<h4 id="quest">${item.questao}</h4>`
     // Caso seja a ultima questão: os botões devem chamar a função de enviar respostas
     if(indiceQuestao == questions.length - 1){
         insereUltimosBotoes(item);
@@ -156,6 +157,7 @@ function insereBotoes(item){
 }
 
 function insereUltimosBotoes(item){
+    frameBt2.innerHTML = '';
     // atualiza o indice
     index = 1;
     // para cada questão da 

@@ -19,32 +19,15 @@
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #e600e6;
+    background-color: #000000;
     background-image:url('img/img00.jpg');
-
     background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-attachment: fixed;
     transition: background-image 2s ease-in-out;
 }
-/*
-#Titulo_inicial{
-    border-style: none;
-    position: absolute;
-    top:0;
-    text-align: center;
-    padding: 0;
-    height: 10%;
-    width: 80%;
-    /*font-family: 'orbitron';
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.3em;
-    color: #00ff99;    
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-*/
+
 #Titulo_inicial{
     /*conf fontes*/
     font-family: 'Orbitron', sans-serif;
@@ -52,7 +35,7 @@
     color: white;
 
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 
     background: linear-gradient(145deg, #0f0f0f, #2a2a2a);
     -webkit-background-clip: text;
@@ -60,9 +43,10 @@
 
     display: inline-block;
     position: absolute;
-    top:0;
+    top:5%;
     text-align: center;
 }
+
 h2::before {
     content: '';
     position: absolute;
@@ -72,7 +56,7 @@ h2::before {
     height: 100%;
     background: radial-gradient(circle, rgba(0, 255, 153, 0.5), transparent);
     border-radius: 50%;
-    transform: scale(1.5);
+    transform: scale(0.75);
     opacity: 0;
     z-index: -1;
     transition: all 0.3s ease;
@@ -87,20 +71,9 @@ h2:hover::before {
     color: white;
     font-family: 'Righteous', sans-serif;
     font-size: 2.0em;
+    text-shadow: 2px 2px 0px black;
 }
 
-/*button{
-    width: 80%;
-    text-align: center;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    padding: 15px 30px;
-
-    cursor: pointer;
-    background-color: white;
-    color: black;
-}*/
 button {
     width: 80%;
     font-family: 'Righteous', cursive;
@@ -390,4 +363,13 @@ button span {
         height: 300px;
         opacity: 0;
     }
+}
+
+#quest{
+    color: #00FFCB;
+}
+
+.resposta{
+    max-width: 40%;
+    margin-top: 1.5%;
 }
