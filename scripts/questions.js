@@ -33,7 +33,7 @@ const questions = [
         questao: "Quais das seguintes substâncias você acredita que podem esta no cigarro eletrônico?",
         respostas:[
             {opcao:"Nicotina"},
-            {opcao:"Metais pesados"},
+            {opcao:"Produtos quimicos"},
             {opcao:"Metais pesados"},
             {opcao:"Aromas artificiais"},
             {opcao:"Não sei!"}
