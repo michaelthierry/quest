@@ -108,6 +108,7 @@ function enviarResposta(e){
         })
         .then(function(data) {
             console.log('Dados enviados com sucesso!', data);
+
             fimPesquisa();  // Chama a função que você definiu
         })
         .catch(function(error) {
