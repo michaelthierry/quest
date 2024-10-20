@@ -45,9 +45,9 @@ function fimPesquisa(){
 
     perguntas.appendChild(div);
     deletButtonsNavegate();
-    /*setTimeout(() => {
+    setTimeout(() => {
         location.reload(); // Recarrega a página após 2 segundos
-    }, 5000);*/
+    }, 5000);
 }
 // carrega a proxima questão
 function proximaQuestao(e){
@@ -96,9 +96,7 @@ function enviarResposta(e){
         data.botao_clicado = botao_clicado;
         const jsonData = JSON.stringify(data);
         //console.log(jsonData);
-        var e = {
-            "botao_clicado": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-        };
+        
         console.log("Enviando JSON:", e);
         
         fetch('https://script.google.com/macros/s/AKfycby4GxOSku7aaoddB7QPU0DDVFHcKw_J8x-B_2cXQCSu7uOFXv5H7y2gNdPxEfF86Cq2KA/exec', {
@@ -107,7 +105,7 @@ function enviarResposta(e){
                 'Content-Type': 'application/json'
             },
             mode:'no-cors',
-            body: JSON.stringify(e)
+            body: JSON.stringify(data)
         })
         .then(data => {
             console.log('Resposta recebida:', data);
