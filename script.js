@@ -102,6 +102,7 @@ function enviarResposta(e){
             headers: {
                 'Content-Type': 'application/json'
             },
+            mode:'no-cors',
             body: JSON.stringify({
                 "botao_clicado": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
             })
