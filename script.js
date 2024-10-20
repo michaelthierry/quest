@@ -45,9 +45,9 @@ function fimPesquisa(){
 
     perguntas.appendChild(div);
     deletButtonsNavegate();
-    setTimeout(() => {
+    /*setTimeout(() => {
         location.reload(); // Recarrega a página após 2 segundos
-    }, 5000);
+    }, 5000);*/
 }
 // carrega a proxima questão
 function proximaQuestao(e){
@@ -102,16 +102,9 @@ function enviarResposta(e){
             headers: {
                 'Content-Type': 'application/json'
             },
-            mode: 'no-cors',
             body: JSON.stringify({
                 "botao_clicado": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
             })
-        })
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error('Erro na requisição: ' + response.statusText);
-            }
-            return response.json();
         })
         .then(function(data) {
             console.log('Dados enviados com sucesso!', data);
