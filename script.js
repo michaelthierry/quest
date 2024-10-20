@@ -96,7 +96,37 @@ function enviarResposta(e){
         data.botao_clicado = botao_clicado;
         const jsonData = JSON.stringify(data);
         console.log(jsonData);
-        fimPesquisa();
+
+        fetch('https://script.google.com/macros/s/AKfycbw3c7sSCJa3SjxH4frVrRdz2Dp_pUGuP8jKk46AvRVHIsP-KFbWIt8BsNcwCLB6BGEFBA/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            mode: 'no-cors',
+            body: JSON.stringify({
+                "botao_clicado": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+            })
+        })
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Erro na requisição: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            console.log('Dados enviados com sucesso!', data);
+            fimPesquisa();  // Chama a função que você definiu
+        })
+        .catch(function(error) {
+            console.log('Erro:', error);
+        });
+        
+        //fimPesquisa();
+        // (async() => {
+        //     const w = await write([['1'], ['2']]) 
+        //     console.log(w)
+        // })      
+
     });
     opcoes.appendChild(div);
 }
@@ -207,4 +237,22 @@ function deletButtonsNavegate(){
     const bt2 = document.getElementById('frame-button2');
     bt1.remove()
     bt2.remove()
+}
+
+async function write(values){
+    const sh = google.sheets({version:'v4', auth});
+    const id = '1-p0IUOw7leuWUFs0dwsWZ_jYAv7eGiLyS4PqohGwELw'
+    const range = 'Sheet1!A1';
+    const opt = 'USER_ENTERED'
+    const rec = {values}
+
+    try{
+        const res = await sh.spreadsheats.values.update({
+            id, range, opt, rec
+        })
+        
+        return res;
+    }catch(error){
+        console.error('Erro:', error)
+    }
 }
