@@ -95,24 +95,24 @@ function enviarResposta(e){
         const data = Object.fromEntries(formData);
         data.botao_clicado = botao_clicado;
         const jsonData = JSON.stringify(data);
-        console.log(jsonData);
-
-        fetch('https://script.google.com/macros/s/AKfycbw3c7sSCJa3SjxH4frVrRdz2Dp_pUGuP8jKk46AvRVHIsP-KFbWIt8BsNcwCLB6BGEFBA/exec', {
+        //console.log(jsonData);
+        var e = {
+            "botao_clicado": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        };
+        console.log("Enviando JSON:", e);
+        
+        fetch('https://script.google.com/macros/s/AKfycby4GxOSku7aaoddB7QPU0DDVFHcKw_J8x-B_2cXQCSu7uOFXv5H7y2gNdPxEfF86Cq2KA/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            mode:'no-cors',
-            body: JSON.stringify({
-                "botao_clicado": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-            })
+            body: JSON.stringify(e)
         })
-        .then(function(data) {
-            console.log('Dados enviados com sucesso!', data);
-
-            fimPesquisa();  // Chama a função que você definiu
+        .then(data => {
+            console.log('Resposta recebida:', data);
+            fimPesquisa();
         })
-        .catch(function(error) {
+        .catch(error => {
             console.log('Erro:', error);
         });
         
